@@ -62,4 +62,7 @@ Modal.propTypes = {
     image: PropTypes.string,
     text: PropTypes.string,
     show: PropTypes.bool.isRequired,
+    buttonTextColor: PropTypes.string,
+    buttonColor: PropTypes.string,
+    backgroundColor: PropTypes.string
 };
