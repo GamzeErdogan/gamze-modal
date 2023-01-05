@@ -3,33 +3,55 @@ import "../components/styles/main.css";
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-const Modal = ({ title, image, text, show }) => {
+const Modal = ({
+    title,
+    image,
+    text,
+    show,
+    backgroundColor,
+    buttonColor,
+    buttonTextColor,
+}) => {
     const [showModal, setShowModal] = useState(show);
 
     return (
-        <div className="modal-background">
+        <>
             <div
-                className="modal-container"
-                style={{ display: !showModal ? "none" : "flex" }}
+                className="modal-background"
+                style={{
+                    display: !showModal ? "none" : "flex",
+                    backgroundColor: backgroundColor
+                        ? backgroundColor
+                        : "white",
+                }}
             >
-                {image ? (
-                    <img
-                        src={image}
-                        alt="icon of modal"
-                        className="image-modal"
-                    />
-                ) : null}
-                {title ? <h2 className="modal-title">{title}</h2> : null}
-                {text ? <p>{text}</p> : null}
-
-                <button
-                    className="modal-button"
-                    onClick={() => setShowModal(false)}
+                <div
+                    className="modal-container"
+                    style={{ display: !showModal ? "none" : "flex" }}
                 >
-                    OK
-                </button>
+                    {image ? (
+                        <img
+                            src={image}
+                            alt="icon of modal"
+                            className="image-modal"
+                        />
+                    ) : null}
+                    {title ? <h2 className="modal-title">{title}</h2> : null}
+                    {text ? <p>{text}</p> : null}
+
+                    <button
+                        className="modal-button"
+                        onClick={() => setShowModal(false)}
+                        style={{
+                            backgroundColor: buttonColor ? buttonColor : "red",
+                            color: buttonTextColor ? buttonTextColor : "black",
+                        }}
+                    >
+                        OK
+                    </button>
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 
