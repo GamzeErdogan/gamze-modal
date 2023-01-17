@@ -17,16 +17,7 @@ You can add title, text or an image as a props.
 
 Example :
 
-`function App() {`
-
-  `return (`
-    `<div className="App">`
-     `<Modal title={'Success!!'} text={'New employee has been created!!!'} image={logo} show=true}/>`
-    `</div>`
-  `);`
-`}`
-
-export default App;
+![kod](https://user-images.githubusercontent.com/96047095/212875637-fe2447e1-4563-49ec-b45e-ffb2bdb95a22.png)
 
  
 ## Changing CSS
@@ -42,6 +33,7 @@ Example :
  buttonColor={} changes the backgroundColor of the button.
 
  buttonTextColor={} changes the color of the text of the button.
+ 
   
 
 
