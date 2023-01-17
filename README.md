@@ -33,6 +33,7 @@ Example :
  buttonColor={} changes the backgroundColor of the button.
 
  buttonTextColor={} changes the color of the text of the button.
+ ![demo](https://user-images.githubusercontent.com/96047095/212876217-ba840dd5-ab52-41a6-94a5-b1f992d3e859.png)
  
   
 
